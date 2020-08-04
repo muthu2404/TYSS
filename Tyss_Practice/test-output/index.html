@@ -2,9 +2,10 @@
 
 <html>
   <head>
-  <title>TestNG new reports</title>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
     <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -48,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\MANJUKAVI_MANI\AppData\Local\Temp\testng-eclipse--1430417930\testng-customsuite.xml</span>
+                    <span>C:\Users\MANJUKAVI_MANI\AppData\Local\Temp\testng-eclipse--1416219962\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.tyss_practice.contactTest.DeleteContactTest" hash-for-method="deleteContactWithOrganization">deleteContactWithOrganization</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.tyss_practice.organiationTest.DeleteOrganizationTest" hash-for-method="deleteOrganization">deleteOrganization</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +120,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.tyss_practice.contactTest.DeleteContactTest</span>
+              <span class="class-name">com.tyss_practice.organiationTest.DeleteOrganizationTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="deleteContactWithOrganization">
-                  </a> <!-- deleteContactWithOrganization -->
-                  <span class="method-name">deleteContactWithOrganization</span>
+                  <a name="deleteOrganization">
+                  </a> <!-- deleteOrganization -->
+                  <span class="method-name">deleteOrganization</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,16 +135,16 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\MANJUKAVI_MANI\AppData\Local\Temp\testng-eclipse--1430417930\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\MANJUKAVI_MANI\AppData\Local\Temp\testng-eclipse--1416219962\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot;&gt;
-  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot; preserve-order=&quot;true&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
+  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.tyss_practice.contactTest.DeleteContactTest&quot;/&gt;
+      &lt;class name=&quot;com.tyss_practice.organiationTest.DeleteOrganizationTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -185,14 +186,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'deleteContactWithOrganization')
-data.setCell(0, 2, 'com.tyss_practice.contactTest.DeleteContactTest')
-data.setCell(0, 3, 32553);
+data.setCell(0, 1, 'deleteOrganization')
+data.setCell(0, 2, 'com.tyss_practice.organiationTest.DeleteOrganizationTest')
+data.setCell(0, 3, 14249);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -218,11 +219,35 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.tyss_practice.contactTest.DeleteContactTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">deleteContactWithOrganization</span>
+              <div class="chronological-class-name">com.tyss_practice.organiationTest.DeleteOrganizationTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">configBS</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-class before">
+                <span class="method-name">configBC</span>
+                <span class="method-start">17 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">3044 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">deleteOrganization</span>
+                <span class="method-start">7377 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAm</span>
+                <span class="method-start">21628 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">configAC</span>
+                <span class="method-start">23114 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-suite after">
+                <span class="method-name">confiAs</span>
+                <span class="method-start">23260 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

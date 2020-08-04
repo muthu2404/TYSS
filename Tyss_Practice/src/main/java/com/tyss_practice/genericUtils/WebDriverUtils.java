@@ -68,6 +68,11 @@ public class WebDriverUtils {
 		return flag;
 	}
 
+	public boolean customWait(WebDriver driver) throws InterruptedException {
+		Thread.sleep(1000);
+		return true;
+	}
+
 	/**
 	 * This method is used to provide wait and click an element
 	 * 
