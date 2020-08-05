@@ -13,6 +13,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+/**
+ * 
+ * @author Rajasekar
+ * 
+ *         This class is act as Base class for all Test script
+ *
+ */
 public class PrimaryClass {
 	public DatabaseLib dbLib = new DatabaseLib();
 	public ExcelLib excelLib = new ExcelLib();
@@ -75,6 +82,7 @@ public class PrimaryClass {
 	public void configAm() {
 
 		/* Logout from Application */
+
 		WebElement wb = driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
 		wLib.moveMouseToElemnet(driver, wb);
 		driver.findElement(By.linkText("Sign Out")).click();

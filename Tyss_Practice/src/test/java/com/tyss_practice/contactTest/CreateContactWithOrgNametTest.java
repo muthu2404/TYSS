@@ -1,17 +1,42 @@
 package com.tyss_practice.contactTest;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.tyss_practice.genericUtils.PrimaryClass;
-
+import com.tyss_practice.objectRepositoryLib.ContactInformationPage;
+import com.tyss_practice.objectRepositoryLib.ContactPage;
+import com.tyss_practice.objectRepositoryLib.CreateNewContactPage;
+import com.tyss_practice.objectRepositoryLib.CreateNewOrganizationPage;
+import com.tyss_practice.objectRepositoryLib.HomePage;
+import com.tyss_practice.objectRepositoryLib.OrganizationInformationPage;
+import com.tyss_practice.objectRepositoryLib.OrganizationLookupPage;
+import com.tyss_practice.objectRepositoryLib.OrganizationPage;
+/**
+ * 
+ * @author Rajasekar
+ * 
+ * This class is used to verify Creation and deletion of contact with Organization
+ *
+ */
 public class CreateContactWithOrgNametTest extends PrimaryClass {
-
+	/**
+	 * 	This class is used to verify Creation and deletion of contact with Organization
+	 * @throws Throwable
+	 */
 	@Test
 	public void createContactWithOrgtest() throws Throwable {
 
+		HomePage hpObj = new HomePage(driver);
+		OrganizationPage orgObj = new OrganizationPage(driver);
+		CreateNewOrganizationPage cnopObj = new CreateNewOrganizationPage(driver);
+		OrganizationInformationPage oipObj = new OrganizationInformationPage(driver);
+		OrganizationLookupPage olpObj = new OrganizationLookupPage(driver);
+		ContactPage cpObj = new ContactPage(driver);
+		CreateNewContactPage cncpObj = new CreateNewContactPage(driver);
+		ContactInformationPage cipObj = new ContactInformationPage(driver);
+		
 		/* Fetch test script specific data */
 		String orgName = excelLib.getExcelData("contact", 1, 2) + "_" + wLib.getRandomNumber();
 		String org_Type = excelLib.getExcelData("contact", 1, 3);
@@ -19,51 +44,51 @@ public class CreateContactWithOrgNametTest extends PrimaryClass {
 		String contactName = excelLib.getExcelData("contact", 1, 5);
 
 		/* step 1 : Navigate to Organization page */
-		driver.findElement(By.linkText("Organizations")).click();
+		hpObj.getOrganizationLink().click();;
 
-		/* step 2 : Navigate to create new Organization page */
-		driver.findElement(By.xpath("//img[@alt='Create Organization...']")).click();
+		/* step 2 : Navigate to create new Organization */
+		orgObj.navigateToCreateNewOrgPage();
 
 		/* step 3 : Create Organization */
-		driver.findElement(By.name("accountname")).sendKeys(orgName);
+		cnopObj.getOrgNameTxtBox().sendKeys(orgName);
 
-		WebElement swb1 = driver.findElement(By.name("accounttype"));
+		WebElement swb1 = cnopObj.getTypeListBox();
 		wLib.select(swb1, org_Type);
 
-		WebElement swb2 = driver.findElement(By.name("industry"));
+		WebElement swb2 = cnopObj.getIndustryListBox();
 		wLib.select(swb2, org_industry);
 
-		driver.findElement(By.xpath("//input[@title='Save [Alt+S]']")).click();
+		cnopObj.getSaveButton().click();
 
-		/* step 4 : Verify the creation of Organization */
-		String actOrgName = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
+		/* step 4 : Verify the Organization */
+		String actOrgName = oipObj.getOrgInfo().getText();
 
 		Assert.assertTrue(actOrgName.contains(orgName));
 
 		/* step 5 : Navigate to Contact page */
-		driver.findElement(By.linkText("Contacts")).click();
+		hpObj.getContactsLink().click();
 
 		/* step 6 : Navigate to create new Contact page */
-		driver.findElement(By.xpath("//img[@alt='Create Contact...']")).click();
+		cpObj.getCreateContact().click();
 
 		/* step 7 : Create new Contact */
-		driver.findElement(By.name("lastname")).sendKeys(contactName);
-		driver.findElement(By.xpath("//input[@name='account_name']/following-sibling::img")).click();
+		cncpObj.getLastNameTxtBox().sendKeys(contactName);
+		cncpObj.getOrgNameLookup().click();
 
 		// Goto new tab
 		wLib.switchToNewTab(driver, "specific_contact_account_address");
 
-		driver.findElement(By.name("search_text")).sendKeys(orgName);
-		driver.findElement(By.name("search")).click();
-		driver.findElement(By.linkText(orgName)).click();
+		olpObj.getSearchTxtBox().sendKeys(orgName);
+		olpObj.getSearchBtn().click();
+		olpObj.getSelectOrg().click();
 
 		// come back to parent Window
 		wLib.switchToNewTab(driver, "Administrator - Contacts");
 
-		driver.findElement(By.xpath("//input[@title='Save [Alt+S]']")).click();
+		cncpObj.getSaveButton().click();
 
-		/* step 8: Verify the Organization */
-		String actconatct = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
+		/* step 8: Verify the Contact Creation */
+		String actconatct = cipObj.getContactInfo().getText();
 		Assert.assertTrue(actconatct.contains(contactName));
 	}
 }

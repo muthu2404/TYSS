@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23219" started-at="2020-08-04T10:22:17Z" finished-at="2020-08-04T10:22:40Z">
+  <suite name="Default suite" duration-ms="40124" started-at="2020-08-04T19:37:51Z" finished-at="2020-08-04T19:38:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23219" started-at="2020-08-04T10:22:17Z" finished-at="2020-08-04T10:22:40Z">
-      <class name="com.tyss_practice.organiationTest.DeleteOrganizationTest">
-        <test-method status="PASS" signature="configBS()[pri:0, instance:com.tyss_practice.organiationTest.DeleteOrganizationTest@26be92ad]" name="configBS" is-config="true" duration-ms="9" started-at="2020-08-04T15:52:17Z" finished-at="2020-08-04T15:52:17Z">
+    <test name="Default test" duration-ms="40124" started-at="2020-08-04T19:37:51Z" finished-at="2020-08-04T19:38:31Z">
+      <class name="com.tyss_practice.contactTest.DeleteContactTest">
+        <test-method status="PASS" signature="configBS()[pri:0, instance:com.tyss_practice.contactTest.DeleteContactTest@26be92ad]" name="configBS" is-config="true" duration-ms="12" started-at="2020-08-05T01:07:51Z" finished-at="2020-08-05T01:07:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBS -->
-        <test-method status="PASS" signature="configBC()[pri:0, instance:com.tyss_practice.organiationTest.DeleteOrganizationTest@26be92ad]" name="configBC" is-config="true" duration-ms="3018" started-at="2020-08-04T15:52:17Z" finished-at="2020-08-04T15:52:20Z">
+        <test-method status="PASS" signature="configBC()[pri:0, instance:com.tyss_practice.contactTest.DeleteContactTest@26be92ad]" name="configBC" is-config="true" duration-ms="3465" started-at="2020-08-05T01:07:51Z" finished-at="2020-08-05T01:07:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBC -->
-        <test-method status="PASS" signature="configBM()[pri:0, instance:com.tyss_practice.organiationTest.DeleteOrganizationTest@26be92ad]" name="configBM" is-config="true" duration-ms="4333" started-at="2020-08-04T15:52:20Z" finished-at="2020-08-04T15:52:24Z">
+        <test-method status="PASS" signature="configBM()[pri:0, instance:com.tyss_practice.contactTest.DeleteContactTest@26be92ad]" name="configBM" is-config="true" duration-ms="5283" started-at="2020-08-05T01:07:54Z" finished-at="2020-08-05T01:08:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method status="PASS" signature="deleteOrganization()[pri:0, instance:com.tyss_practice.organiationTest.DeleteOrganizationTest@26be92ad]" name="deleteOrganization" duration-ms="14249" started-at="2020-08-04T15:52:24Z" finished-at="2020-08-04T15:52:39Z">
+        <test-method status="PASS" signature="deleteContactWithOrganization()[pri:0, instance:com.tyss_practice.contactTest.DeleteContactTest@26be92ad]" name="deleteContactWithOrganization" duration-ms="29788" started-at="2020-08-05T01:08:00Z" finished-at="2020-08-05T01:08:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteOrganization -->
-        <test-method status="PASS" signature="configAm()[pri:0, instance:com.tyss_practice.organiationTest.DeleteOrganizationTest@26be92ad]" name="configAm" is-config="true" duration-ms="1486" started-at="2020-08-04T15:52:39Z" finished-at="2020-08-04T15:52:40Z">
+        </test-method> <!-- deleteContactWithOrganization -->
+        <test-method status="PASS" signature="configAm()[pri:0, instance:com.tyss_practice.contactTest.DeleteContactTest@26be92ad]" name="configAm" is-config="true" duration-ms="1372" started-at="2020-08-05T01:08:29Z" finished-at="2020-08-05T01:08:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAm -->
-        <test-method status="PASS" signature="configAC()[pri:0, instance:com.tyss_practice.organiationTest.DeleteOrganizationTest@26be92ad]" name="configAC" is-config="true" duration-ms="113" started-at="2020-08-04T15:52:40Z" finished-at="2020-08-04T15:52:40Z">
+        <test-method status="PASS" signature="configAC()[pri:0, instance:com.tyss_practice.contactTest.DeleteContactTest@26be92ad]" name="configAC" is-config="true" duration-ms="188" started-at="2020-08-05T01:08:31Z" finished-at="2020-08-05T01:08:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAC -->
-        <test-method status="PASS" signature="confiAs()[pri:0, instance:com.tyss_practice.organiationTest.DeleteOrganizationTest@26be92ad]" name="confiAs" is-config="true" duration-ms="0" started-at="2020-08-04T15:52:40Z" finished-at="2020-08-04T15:52:40Z">
+        <test-method status="PASS" signature="confiAs()[pri:0, instance:com.tyss_practice.contactTest.DeleteContactTest@26be92ad]" name="confiAs" is-config="true" duration-ms="1" started-at="2020-08-05T01:08:31Z" finished-at="2020-08-05T01:08:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- confiAs -->
-      </class> <!-- com.tyss_practice.organiationTest.DeleteOrganizationTest -->
+      </class> <!-- com.tyss_practice.contactTest.DeleteContactTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
